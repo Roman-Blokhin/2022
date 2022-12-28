@@ -9,11 +9,11 @@ while True:
             print ('\nНу что ж, нет так нет!')
             break
     try:
-        b = int (input('Введите второе число: '))
+        b = int (input('\nВведите второе число: '))
     except ValueError:
         print ('\nНе не не, тут должны быть циферки.')
         try:
-            b = int (input('Введите второе число: '))
+            b = int (input('\nВведите второе число: '))
         except ValueError:
             print ('\nНу что ж, нет так нет!')
             break
