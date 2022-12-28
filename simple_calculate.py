@@ -42,3 +42,5 @@ while True:
     if qw == '0':
         print('\nGAME OVER')
         break
+        
+# that is all that i wanted to do
