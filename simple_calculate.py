@@ -8,8 +8,16 @@ while True:
         except ValueError:
             print ('\nНу что ж, нет так нет!')
             break
+    try:
+        b = int (input('Введите второе число: '))
+    except ValueError:
+        print ('\nНе не не, тут должны быть циферки.')
+        try:
+            b = int (input('Введите второе число: '))
+        except ValueError:
+            print ('\nНу что ж, нет так нет!')
+            break
 
-    b = int (input('Введите второе число: '))
     c = input('Выберите действие: \n1. + \n2. - \n3. * \n4. / \n')
 
     s = a + b
