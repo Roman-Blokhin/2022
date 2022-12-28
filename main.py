@@ -17,4 +17,7 @@ while True:
     if c == '4':
         print ('Ваш результат: ' + str (d))
 
-    qw = input ('')
+    qw = input ('Нажмите Enter для продолжения. Для выхода нажмите 0. ')
+    if qw == '0':
+        print('GAME OVER')
+        break
