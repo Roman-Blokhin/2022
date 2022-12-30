@@ -8,12 +8,13 @@ while True:
     print ('3. Благодарности')
     print ('4. Ошибки')
     print ('5. Проблемы')
+    print ('0. Выход')
 
-    a = '\n1. Мне не привезли заказ'
-    b = '2. Мне привезли плохой товар'
-    c = '3. Привезли не то'
-    d = '4. Не доложили в заказ'
-    e = '5. Не учли комментарий'
+    a = '\n1. Ситуация 1'
+    b = '2. Ситуация 2'
+    c = '3. Ситуация 3'
+    d = '4. Ситуация 4'
+    e = '5. Ситуация 5'
 
     qu = input ('\nВыберите действие: ')
 
@@ -36,8 +37,41 @@ while True:
         if qu1 == '5':
             print (Fore.RED + '\nВаш ответ 5' + Style.RESET_ALL)
 
-    qu0 = input ('\nДля продолжения нажмите ' + Fore.RED + 'Enter' + Style.RESET_ALL + ', для выхода ' + Fore.RED + '0'
-                 + Style.RESET_ALL + ': ')
-    if qu0 == '0':
+        quu = input('\nДля продолжения нажмите ' + Fore.RED + 'Enter: ' + Style.RESET_ALL)
+
+    '''add other modul of the menu'''
+
+    aa = '\n1. Ситуация 1'
+    bb = '2. Ситуация 2'
+    cc = '3. Ситуация 3'
+    dd = '4. Ситуация 4'
+    ee = '5. Ситуация 5'
+
+    if qu == '2':
+        print(aa)
+        print(bb)
+        print(cc)
+        print(dd)
+        print(ee)
+
+        qu1 = input('\nВыберите действие: ')
+        if qu1 == '1':
+            print(Fore.RED + '\nВаш ответ 1' + Style.RESET_ALL)
+        if qu1 == '2':
+            print(Fore.RED + '\nВаш ответ 2' + Style.RESET_ALL)
+        if qu1 == '3':
+            print(Fore.RED + '\nВаш ответ 3' + Style.RESET_ALL)
+        if qu1 == '4':
+            print(Fore.RED + '\nВаш ответ 4' + Style.RESET_ALL)
+        if qu1 == '5':
+            print(Fore.RED + '\nВаш ответ 5' + Style.RESET_ALL)
+
+        quu = input('\nДля продолжения нажмите ' + Fore.RED + 'Enter: ' + Style.RESET_ALL)
+
+    """than you can add other modules of the menu as yuo want"""
+
+    '''finish question'''
+
+    if qu == '0':
         print(Fore.RED + '\nДо встречи!' + Style.RESET_ALL)
         break
