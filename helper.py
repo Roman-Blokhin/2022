@@ -39,7 +39,7 @@ while True:
 
         quu = input('\nДля продолжения нажмите ' + Fore.RED + 'Enter: ' + Style.RESET_ALL)
 
-    '''add other modul of the menu'''
+    '''add other module of the menu'''
 
     aa = '\n1. Ситуация 1'
     bb = '2. Ситуация 2'
@@ -68,7 +68,7 @@ while True:
 
         quu = input('\nДля продолжения нажмите ' + Fore.RED + 'Enter: ' + Style.RESET_ALL)
 
-    """than you can add other modules of the menu as yuo want"""
+    """than you can add other modules of the menu as you want"""
 
     '''finish question'''
 
