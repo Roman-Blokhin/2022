@@ -18,6 +18,17 @@ def add_operation(operation):
     e.delete(0, END)
     e.insert(0, value + operation)
 
+# делаем функцию вычисления
+def add_calculate ():
+    value = e.get()
+    e.delete(0, END)
+    e.insert(0, eval(value)) # импортируем встроенную функцию вычисления - eval
+
+# делаем функцию очистки наших значений
+def add_clear ():
+    e.delete(0, END)
+    e.insert (0, 0)
+
 # для компактности делаем функцию, которая берет все параметры кнопки
 def make_button (digit):
     return Button(text=digit, bd=5, font=('Arial', 15, 'normal'), command=lambda: add_digit (digit))
@@ -26,6 +37,13 @@ def make_button (digit):
 def make_operation (operation):
     return Button(text=operation, bd=5, font=('Arial', 15, 'normal'), command=lambda: add_operation (operation))
 
+# функция для кнопки вычисления
+def make_calculate (operation):
+    return Button(text=operation, bd=5, font=('Arial', 15, 'normal'), command=add_calculate)
+
+# функция для кнопки очистки поля ввода
+def make_clear (operation):
+    return Button(text=operation, bd=5, font=('Arial', 15, 'normal'), command=add_clear)
 
 root = Tk()
 root.geometry('238x270+200+200')
@@ -51,6 +69,9 @@ make_operation ('/').grid(row=1, column=3, stick='wens', padx=3, pady=1)
 make_operation ('*').grid(row=2, column=3, stick='wens', padx=3, pady=1)
 make_operation ('-').grid(row=3, column=3, stick='wens', padx=3, pady=1)
 make_operation ('+').grid(row=4, column=3, stick='wens', padx=3, pady=1)
+
+make_calculate ('=').grid(row=4, column=2, stick='wens', padx=3, pady=1)
+make_clear ('C').grid(row=4, column=1, stick='wens', padx=3, pady=1)
 
 root.grid_columnconfigure(0, minsize=60)
 root.grid_columnconfigure(1, minsize=60)
