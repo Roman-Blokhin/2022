@@ -2,15 +2,15 @@
 
 from tkinter import *
 
-
+# делаем функцию с командой для наших кнопок
 def add_digit(digit):
-    value = e.get() + str(digit)
-    if value [0] == '0':
-        value = value [1:]
-    e.delete(0, END)
-    e.insert(0, value)
+    value = e.get() + str(digit) # делаем так, чтобы новое число добавлялось справа
+    if value [0] == '0': # если первый символ равен нулю
+        value = value [1:] # мы оставляем все, кроме первого символа
+    e.delete(0, END) # очищаем поле ввода
+    e.insert(0, value) # вставляем в поле ввода наше значение на 1 символ
 
-
+# для компактности делаем функцию, которая берет все параметры кнопки
 def make_button (digit):
     return Button(text=digit, bd=5, font=('Arial', 15, 'normal'), command=lambda: add_digit (digit))
 
@@ -20,6 +20,7 @@ root.geometry('250x250+200+200')
 root.config(bg='grey')
 root.title('Calculate')
 
+#
 e = Entry(root, bd=5, justify=RIGHT, font = ('Arial', 15, 'normal'))
 e.grid(row=0, column=0, columnspan=4, stick='wens', padx=5, pady=5)
 
